@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batalha Diária de Valheim — Placar Oficial</title>
+<meta name="description" content="Placar oficial da gincana Batalha Diária de Valheim entre dois jogadores PvP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== TELA DE CARREGAMENTO ==================== -->
+  <div id="loading-screen">
+    <div class="loading-inner">
+      <div class="loading-emblem">⚔️</div>
+      <p class="loading-text">BATALHA DIÁRIA DE VALHEIM</p>
+      <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ==================== EFEITOS DE FUNDO ==================== -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-fog"></div>
+
+  <div class="app" id="app">
+
+    <!-- ==================== CABEÇALHO ==================== -->
+    <header class="header">
+      <div class="header-left">
+        <div class="emblem">⚔️</div>
+        <div class="header-titles">
+          <h1>Batalha Diária de Valheim</h1>
+          <p>Registro Oficial de Resultados e Benefícios da Gincana</p>
+        </div>
+      </div>
+
+      <div class="header-right" id="header-stats">
+        <div class="header-stat">
+          <span class="header-stat-value" id="stat-total-battles">--</span>
+          <span class="header-stat-label">Batalhas</span>
+        </div>
+        <div class="header-stat-divider"></div>
+        <div class="header-stat">
+          <span class="header-stat-value" id="stat-score">--</span>
+          <span class="header-stat-label">Placar Geral</span>
+        </div>
+        <div class="header-stat-divider"></div>
+        <div class="header-stat">
+          <span class="header-stat-value" id="stat-last-battle">--</span>
+          <span class="header-stat-label">Última Batalha</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- ==================== CARDS DOS JOGADORES ==================== -->
+      <section class="players-row reveal">
+        <div class="player-card" id="player-card-1"></div>
+        <div class="vs-badge">VS</div>
+        <div class="player-card" id="player-card-2"></div>
+      </section>
+
+      <!-- ==================== FAVOR ATIVO HOJE ==================== -->
+      <section class="favor-banner reveal" id="favor-banner">
+        <!-- Conteúdo injetado via JS -->
+      </section>
+
+      <!-- ==================== TERRITÓRIOS EM DISPUTA ==================== -->
+      <section class="territory-card reveal">
+        <div class="section-header">
+          <h2>🗺️ Territórios Reivindicados</h2>
+          <span class="section-sub">Posse atual de cada terreno ou local disputado</span>
+        </div>
+        <div class="territory-list" id="territory-list">
+          <!-- Injetado via JS -->
+        </div>
+        <p class="empty-state" id="territory-empty" hidden>Nenhum território foi reivindicado ainda.</p>
+      </section>
+
+      <!-- ==================== TABELA DE BATALHAS ==================== -->
+      <section class="battles-card reveal">
+        <div class="section-header">
+          <h2>🛡️ Placar de Batalhas</h2>
+          <span class="section-sub">Histórico completo — Melhor de 3 (MD3)</span>
+        </div>
+
+        <div class="table-scroll">
+          <table class="battles-table">
+            <thead>
+              <tr>
+                <th>Batalha #</th>
+                <th>Nome da Batalha</th>
+                <th>Competidores</th>
+                <th>Resultado</th>
+                <th>Vencedor</th>
+                <th>Derrotado</th>
+                <th>Direito 1: Terreno / Local</th>
+                <th>Direito 2: Itens</th>
+                <th>Direito 3: Favor</th>
+              </tr>
+            </thead>
+            <tbody id="battles-tbody">
+              <!-- Injetado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>⚔️ Batalha Diária de Valheim - conforme o <strong>Regulamento Oficial</strong> da gincana.</p>
+        <p class="footer-sub">Para atualizar o placar, edite o arquivo <code>script.js</code>. Veja o <code>README.md</code> para instruções detalhadas.</p>
+      </footer>
+
+    </main>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
